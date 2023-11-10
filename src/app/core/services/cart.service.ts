@@ -7,7 +7,6 @@ import { Producto } from '../interfaces/producto';
 })
 export class CartService {
 
-<<<<<<< HEAD
   carrito: ProductoCarrito[]= []  //arranca como array vacio porque al principio el carrito esta vacio
  //carrito es una variable que tiene los datos guardados, con el tipo de dato array
  //ProductoCarrito es un tipo de dato
@@ -64,62 +63,10 @@ export class CartService {
 
   guardarlocalStorage(){
     localStorage.setItem("carrito", JSON.stringify(this.carrito)) 
-=======
-  carrito: ProductoCarrito[] = [];
-  totalCarrito: number = 0;
-
-  constructor(){
-    const guardado = localStorage.getItem("carrito");
-    if(guardado){
-      this.carrito = JSON.parse(guardado);
-      this.calcularTotal()
-    }
-  }
-
-  agregarAlCarrito(producto:Producto,cantidad:number){
-    //Reviso si el producto existe en el carrito
-    const index = this.carrito.findIndex(item => item.producto.nombre === producto.nombre);
-    if(index === -1){
-      //Si es un producto nuevo creo el elemento producto y lo pongo en el carrito
-      const productoActual:ProductoCarrito = {
-        cantidad: cantidad,
-        producto: producto
-      }
-      this.carrito.push(productoActual);
-    } else {
-      //Si el producto ya existe, modifico el carrito para agregarle las unidades correspondientes
-      this.carrito[index].cantidad = this.carrito[index].cantidad + cantidad;
-    }
-    console.log(this.carrito)
-    this.guardarLocalStorage()
-    this.calcularTotal()
-  }
-
-  eliminarProducto(nombre: string){
-    this.carrito = this.carrito.filter(item => item.producto.nombre !== nombre);
-    this.guardarLocalStorage()
-    this.calcularTotal()
-  }
-
-  vaciarCarrito(){
-    this.carrito = [];
-    this.guardarLocalStorage();
-    this.calcularTotal();
-  }
-
-  cambiarCantidad(){
-    this.guardarLocalStorage();
-    this.calcularTotal();
-  }
-
-  guardarLocalStorage(){
-    localStorage.setItem("carrito",JSON.stringify(this.carrito))
->>>>>>> fa844422bc45f8a9873fee8096f81be19eb63fec
   }
 
   calcularTotal(){
     let subtotal = 0;
-<<<<<<< HEAD
     this.carrito.forEach(item => {       //el forEach agarra cada producto del carrito y le asigna un item
       subtotal = subtotal + item.cantidad * item.producto.precio
     })
@@ -128,11 +75,4 @@ export class CartService {
 
 //JSON.stringify me transforma el objeto en un string (lo stringifica)--> esto es porque el local storage solo guarda strings. 
 
-=======
-    this.carrito.forEach(item => {
-      subtotal = subtotal + item.cantidad * item.producto.precio
-    })
-    this.totalCarrito = subtotal;
-  }
->>>>>>> fa844422bc45f8a9873fee8096f81be19eb63fec
 }

@@ -89,11 +89,11 @@ export const CATEGORIAS: Categoria[] = [
               'https://www.cronica.com.ar/__export/1653520801548/sites/cronica/img/2021/06/17/chocotorta_2_crop1623944104124.jpg_792575817.jpg',
           },
           {
-            nombre: 'Turrón de Quaker',
+            nombre: 'Brownie',
             precio: 800,
-            descripcion: "Turrón con avena, chocolate y manteca",
+            descripcion: "Brownie de chocolate",
             imagen:
-              'https://assets.elgourmet.com/wp-content/uploads/2023/03/cover_ipk5fgqbdh_eg-pf-platos-turron-de-avena-hi-03.jpg',
+              'https://www.hogarmania.com/archivos/201903/postres-chocolate-848x477x80xX.jpg',
           },
         ]
     },

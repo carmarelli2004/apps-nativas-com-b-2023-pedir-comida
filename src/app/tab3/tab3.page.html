@@ -1,0 +1,90 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+<<<<<<< HEAD
+    <ion-title>Carrito</ion-title>
+=======
+    <ion-title>
+      Carrito
+    </ion-title>
+>>>>>>> fa844422bc45f8a9873fee8096f81be19eb63fec
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Carrito</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+<<<<<<< HEAD
+      <ion-card-title> Resumen de tu pedido </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list> 
+        <ion-item *ngFor="let item of cartService.carrito"> 
+<!-- *ngFor no solo repite sino que tambien creas una variabe --> 
+          <ion-thumbnail slot="start">
+            <img alt= "{{item.producto.nombre}}" src= {{item.producto.imagen}}/>
+=======
+      <ion-card-title>Productos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let item of cartService.carrito">
+          <ion-thumbnail slot="start">
+            <img alt="{{item.producto.nombre}}" src="{{item.producto.imagen}}" />
+>>>>>>> fa844422bc45f8a9873fee8096f81be19eb63fec
+          </ion-thumbnail>
+          <ion-label>{{item.producto.nombre}} {{item.cantidad}}</ion-label>
+          <ion-button [fill]="'clear'" (click)="cartService.eliminarProducto(item.producto.nombre)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+<<<<<<< HEAD
+
+    <ion-list [inset]="true">
+      <ion-item>
+        <ion-label>Subtotal: $ {{cartService.totalCarrito}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Descuentos:</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Envio:</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Total:</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-button fill="outline" expand="block" shape="round" (click)="realizarPedido()">Realizar pedido</ion-button>
+    <ion-button fill="outline" expand="block" shape="round" (click)="cartService.vaciarCarrito()"> Borrar carrito</ion-button>
+    
+  </ion-content>
+=======
+  <ion-card>
+    <ion-card-content>
+      <ion-list [inset]="true">
+        <ion-item>
+          <ion-label>Subtotal: ${{cartService.totalCarrito}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Descuentos: $</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Total: $</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+    <ion-button expand="block" (click)="realizarPedido()">Realizar pedido</ion-button>
+    <ion-button expand="block" (click)="cartService.vaciarCarrito()">Borrar carrito</ion-button>
+
+
+</ion-content>
+>>>>>>> fa844422bc45f8a9873fee8096f81be19eb63fec

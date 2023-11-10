@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+<<<<<<< HEAD
+    <ion-title>{{producto.nombre}}</ion-title>
+    <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+=======
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{producto.nombre}}</ion-title>
+>>>>>>> fa844422bc45f8a9873fee8096f81be19eb63fec
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title size="large">{{producto.nombre}}</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  <ion-card>
+    <img alt="{{producto.nombre}}" src="{{producto.imagen}}" />
+    <ion-card-header>
+      <ion-card-title>{{producto.nombre}}</ion-card-title>
+      <!-- <ion-card-subtitle>Card Subtitle</ion-card-subtitle> -->
+    </ion-card-header>
+
+<<<<<<< HEAD
+    <ion-button fill="clear" (click)="cantidad=cantidad-1">-1</ion-button>
+    <span>{{cantidad}}</span>
+    <ion-button fill="clear" (click)="cantidad=cantidad+1">+1</ion-button>
+    <ion-button id="agregar" fill="clear" (click)="cartService.agregarAlCarrito(producto,cantidad)" [routerLink]="['/tabs/tab3']">Agregar al carrito</ion-button>
+   
+    <ion-toast trigger="agregar" message="El producto fue añiadido" [duration]="3000"></ion-toast>
+=======
+    <ion-card-content>
+      <p>{{producto.descripcion}} - ${{producto.precio}}</p>
+
+      <div id="contador-container">
+        <ion-button fill="clear" (click)="cantidad= cantidad-1">-1</ion-button>
+        <span>{{cantidad}}</span>
+        <ion-button fill="clear" (click)="cantidad= cantidad+1" >+1</ion-button>
+      </div>
+
+      <ion-button fill="clear" id="agregarAlCarrito" (click)="cartService.agregarAlCarrito(producto,cantidad)" [routerLink]="['/tabs/tab3']">Agregar al carrito</ion-button>
+
+    </ion-card-content>
+>>>>>>> fa844422bc45f8a9873fee8096f81be19eb63fec
+  </ion-card>
+
+  <ion-toast trigger="agregarAlCarrito" message="Producto agregado" [duration]="3000"></ion-toast>
+</ion-content>

@@ -76,10 +76,10 @@ export const CATEGORIAS: Categoria[] = [
         fotoUrl: "https://www.hogarmania.com/archivos/201903/postres-chocolate-848x477x80xX.jpg",
         productos: [
           {
-            nombre: 'Tiramisú',
+            nombre: 'Lemonies',
             precio: 800,
-            descripcion: "Clasico tiramisú al estilo italiano.",
-            imagen: 'https://i.blogs.es/410470/vasitos/1366_2000.jpeg',
+            descripcion: "Espumitas con sabor a limon.",
+            imagen: 'https://i.ytimg.com/vi/yQQaBdgOFaE/maxresdefault.jpg',
           },
           {
             nombre: 'Chocotorta',

@@ -31,7 +31,7 @@
 
     <ion-button shape="round"(click)="cantidad=cantidad-1">-1</ion-button>
     <span>{{cantidad}}</span>
-    <ion-button fill="clear" (click)="cantidad=cantidad+1">+1</ion-button>
+    <ion-button shape="round"(click)="cantidad=cantidad-1">-1</ion-button>
     <ion-button id="agregar" fill="clear" (click)="cartService.agregarAlCarrito(producto,cantidad)" [routerLink]="['/tabs/tab3']">Agregar al carrito</ion-button>
    
     <ion-toast trigger="agregar" message="El producto fue añiadido" [duration]="3000"></ion-toast>
